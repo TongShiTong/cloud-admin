@@ -41,6 +41,15 @@
         </template>
       </el-table-column>
     </el-table>
+
+    <!--分页-->
+    <el-pagination
+      background
+      layout="prev, pager, next"
+      :page-size="5"
+      :total="count"
+      @current-change="pageChange">
+    </el-pagination>
   </div>
 </template>
 
@@ -48,14 +57,16 @@
     export default {
       data () {
         return {
-          tableData: []
+          tableData: [],
+          count: 0,
+          page: 1
         }
       },
       methods: {
         getData() {
-
-          this.$axios.get('/user').then(res => {
+          this.$axios.get('/user', {pn: this.page, size: 5}).then(res => {
             if (res.code == 200) {
+              this.count = res.count
               this.tableData = res.data
             }
           })
@@ -79,6 +90,10 @@
               message: '已取消删除'
             });
           });
+        },
+        pageChange (page) {
+          this.page = page
+          this.getData()
         }
       },
       created() {

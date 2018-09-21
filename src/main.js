@@ -7,6 +7,9 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import {$axios} from "./utils";
+import uploadImg from '@/components/upload-com'
+
+Vue.component('uploadImg', uploadImg)
 
 //挂载到原型上
 Vue.prototype.$axios = $axios

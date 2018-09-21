@@ -8,7 +8,9 @@ const components = {
   index: () => import('@/views/index/index'),
   users: () => import('@/views/users/index'),
   uploadDemo: () => import('@/views/testUploadDemo/index'),
-  userEdit: () => import('@/views/userEdit/userEdit')
+  userEdit: () => import('@/views/userEdit/userEdit'),
+  addUser: () => import('@/views/addUser/index'),
+  addSwiperDemo: () => import('@/views/swiper/addSwiperDemo')
 }
 
 export default new Router({
@@ -55,6 +57,21 @@ export default new Router({
             title: '修改个人信息',
           },
           component: components.userEdit
+        },
+        {
+          path: 'addUser',
+          meta: {
+            title: '添加管理员',
+          },
+          component: components.addUser
+        },
+        {
+          path: 'addSwiperDemo',
+          name: 'addSwiperDemo',
+          meta: {
+            title: '添加轮播图',
+          },
+          component: components.addSwiperDemo
         }
       ]
     }
