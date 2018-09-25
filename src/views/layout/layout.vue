@@ -25,7 +25,10 @@
             <el-menu-item index="/layout/addUser">添加管理员</el-menu-item>
             <el-menu-item index="/layout/users">用户管理页</el-menu-item>
             <el-menu-item index="/layout/uploadDemo">上传图片测试页</el-menu-item>
+            <el-menu-item index="/layout/swiper">轮播图管理</el-menu-item>
             <el-menu-item index="/layout/addSwiperDemo">添加轮播图</el-menu-item>
+            <el-menu-item index="/layout/managementBook">图书管理</el-menu-item>
+            <el-menu-item index="/layout/addBook">添加图书</el-menu-item>
           <!--</el-menu-item-group>-->
           </el-submenu>
         <!--</el-submenu>-->
