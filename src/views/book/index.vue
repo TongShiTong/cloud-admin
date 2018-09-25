@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--用轮播图接口代替的获取全部图书接口，后续需要重新写-->
     <el-table :data="swiperData">
       <el-table-column label="图书头图" prop="book.title">
         <template slot-scope="scope">
